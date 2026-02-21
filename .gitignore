@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Keep local virtual envs out of repo
+.venv/
+venv/
+env/
+
+# Task assets to exclude from GitHub
+**/datasets/
+**/client_requests.pdf
+**/presentation_outline.md
+**/presentation_prompt.txt
+**/video_script.md
