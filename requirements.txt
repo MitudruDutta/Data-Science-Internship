@@ -4,3 +4,8 @@ matplotlib
 seaborn
 jupyter
 notebook
+mysql-connector-python
+scikit-learn
+xgboost
+lightgbm
+mlflow

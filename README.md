@@ -1,48 +1,56 @@
-# Nova Mart FMCG Promotion Analysis
+# Data Science & Machine Learning Internship Portfolio
 
-This project analyzes promotional campaign performance for **Nova Mart** and answers client-facing business questions using data visualization and KPI-based insights.
+This repository contains the projects and tasks completed during a comprehensive Data Science and Machine Learning internship. The work spans across data analysis, SQL querying, and an end-to-end machine learning application deployment.
 
-## Business Problem
-Nova Mart runs promotional campaigns (for example, Diwali and Sankranti) across multiple cities and product categories.  
-The client needs to understand:
-- Which cities and categories respond best to promotions
-- Which promotion types drive volume vs revenue
-- Where campaign strategy should be optimized
+The repository is structured into distinct weeks, each focusing on different skill sets and business domains.
 
-## Analysis Objectives
-The analysis is built around two core business KPIs:
-- **IR% (Incremental Revenue %)**  
-  `((Revenue After Promo - Revenue Before Promo) / Revenue Before Promo) * 100`
-- **ISU% (Incremental Sold Units %)**  
-  `((Units Sold After Promo - Units Sold Before Promo) / Units Sold Before Promo) * 100`
+---
 
-## What Was Solved
-The notebooks answer client questions such as:
-- City-level store footprint and promotion response
-- Category contribution to campaign sales
-- Relationship between post-promo price and sales quantity
-- City-wise ISU% comparison
-- Promo-type performance trade-offs (IR% vs ISU%)
-- Category-wise revenue impact before vs after promotions
+## 📁 Repository Structure
 
-## How the Analysis Was Done
-1. Load and clean campaign event data.
-2. Join fact data with store, product, and campaign dimensions.
-3. Create derived revenue fields (`revenue_before`, `revenue_after`).
-4. Compute `IR%` and `ISU%` at city/category/promo-type levels.
-5. Build charts using `Matplotlib` and `Seaborn`.
-6. Convert outputs into presentation-ready insights.
+### 🔹 Week 1: FMCG Promotion Analysis (Nova Mart)
+This week focused on analyzing promotional campaign performance for an FMCG brand to answer client-facing business questions using data visualization and KPI-based insights.
+- **Core KPIs**: Analyzed Incremental Revenue (IR%) and Incremental Sold Units (ISU%).
+- **Key Deliverables**: 
+  - Explored which cities and product categories responded best to specific promotional campaigns (e.g., Diwali, Sankranti).
+  - Evaluated the effectiveness of various promo types (BOGOF, 50% Off, Cashback) on volume versus revenue.
+- **Tech Stack**: Python, Pandas, Matplotlib, Seaborn, Jupyter Notebooks.
 
-## How to Run
-1. Create and activate a Python environment.
-2. Install dependencies:
-   `pip install -r requirements.txt`
-3. Launch Jupyter:
-   `jupyter notebook`
-4. Run the notebooks in order:
-   - `Week 1/Task 1/task1.ipynb`
-   - `Week 1/Task 2/task2.ipynb`
+### 🔹 Week 2: E-Commerce Analytics & EV Sales SQL Analysis
+This week was split into two distinct analytical tasks:
+- **Task 1: E-commerce Customer Analysis (Python)**
+  - Analyzed customer demographics, spending habits, and site engagement.
+  - Explored factors affecting the *cross-sell conversion rate* to understand how likely a customer is to buy extra products.
+- **Task 2: Electric Vehicle (EV) Market Analysis (SQL)**
+  - Executed advanced SQL queries to analyze EV sales data across Indian states and manufacturers.
+  - Computed financial and market metrics such as *Penetration Rate* and *Compound Annual Growth Rate (CAGR)* across different fiscal years.
 
-## Notes
-- Raw datasets and `client_requests.pdf` files are intentionally excluded via `.gitignore`.
-- Presentation/script helper files are also excluded from Git tracking for clean GitHub publishing.
+### 🔹 Week 3 and 4: CodeX Beverage Price Prediction (End-to-End ML)
+The capstone project involved building a complete Machine Learning solution to predict the optimal price range for a new energy drink based on consumer survey responses.
+- **Data Pipeline**: Cleaned raw survey data and engineered derived features (e.g., Health Concern scores, Brand Awareness).
+- **Modeling**: Trained and evaluated various classification models (LightGBM, XGBoost, Random Forest, SVM) and tracked experiments using MLflow.
+- **Deployment**: 
+  - Developed a **FastAPI** backend to serve the serialized LightGBM model.
+  - Built an interactive **Streamlit** frontend allowing users to input consumer profiles and instantly receive pricing predictions along with model confidence probabilities.
+- **Tech Stack**: Scikit-Learn, LightGBM, MLflow, FastAPI, Streamlit, Pandas.
+
+---
+
+## 🚀 How to Run the Projects
+
+1. **Clone the repository** and navigate to the project root.
+2. **Create a virtual environment** and install dependencies:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   pip install -r requirements.txt
+   ```
+3. **Navigating the Code**:
+   - For **Week 1 & 2** (Analysis): Open Jupyter Notebook (`jupyter notebook`) and navigate to the respective `.ipynb` files.
+   - For **Week 3 and 4** (CodeX Project Web App): Navigate to the `Week 3 and 4/CodeX Project` directory and follow the instructions in its specific `README.md` to start the FastAPI server and Streamlit frontend.
+
+---
+
+## 📝 Notes & Data Privacy
+- Raw datasets, specific client instruction PDFs, and database dump files are intentionally excluded via `.gitignore` to maintain confidentiality and reduce repository size.
+- Presentation scripts and helper files generated during the process are also untracked to keep the repository clean.
