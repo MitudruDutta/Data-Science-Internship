@@ -27,3 +27,13 @@ Week 2/Task 2/sql/ev_sales_db.sql
 **/video_script.md
 sql_queries.docx
 ml_flow_output_demo.png
+
+# Local presentation assets (deck, scripts, charts, LinkedIn post) — keep local only
+presentation_assets/
+streamlit_app_demo.gif
+meta_data.txt
+mlflow_dagshub_instructions.md
+
+# Temp rounded-image artifacts from polish scripts
+_rnd_*
+_rnd2_*
